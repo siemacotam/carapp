@@ -1,5 +1,5 @@
 import React from "react";
-import  Mapa  from "../siema";
+import  Mapa from '../siema'
 import SortPanel from "../SortPanel";
 
 const Main = ({markers, data, setFilterOption, filterOption }) => {
@@ -8,6 +8,7 @@ const Main = ({markers, data, setFilterOption, filterOption }) => {
     <div className="mapWrapper">
          <Mapa markers={markers} data={data}/>
        </div>
+       {/* <Mapa /> */}
   </main>;
 };
 

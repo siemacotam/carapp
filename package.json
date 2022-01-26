@@ -1,9 +1,12 @@
 {
+  "homepage": "https://siemacotam.github.io/carapp/",
   "name": "carlocation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "build": "webpack",
     "start": "webpack serve --mode development"
   },
@@ -11,6 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@googlemaps/markerclusterer": "^1.0.21",
+    "@react-google-maps/api": "^2.7.0",
+    "google-map-react": "^2.1.10",
     "google-maps-react": "^2.0.6",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
@@ -22,6 +28,8 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.3.1",
     "source-map-loader": "^3.0.1",
     "style-loader": "^2.0.0",

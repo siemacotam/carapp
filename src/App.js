@@ -6,6 +6,8 @@ import Main from "./layout/Main";
 // import cars from './map.json'
 import PopUp from "./PopUp";
 
+const numbOfCars = 500
+
 const cars2 = {"objects":[{discriminator:"vehicle",platesNumber:"WZPV001",sideNumber:"Z3-PVAN-01",color:"White",type:"TRUCK",picture:{id:"e7ace1de-ab7f-4120-922d-23441a041bd9",name:"e7ace1de-ab7f-4120-922d-23441a041bd9",extension:null,contentType:null},rangeKm:193,batteryLevelPct:98,reservationEnd:null,reservation:null,status:"AVAILABLE",locationDescription:null,address:null,mapColor:{rgb:"ffffff",alpha:0.5},promotion:null,id:"00000000-0000-0000-0005-000000000003",name:"Enigma Python Van",description:null,location:{latitude:52.1935161702226,longitude:20.9304286193486},metadata:null}]}
 
 export default function App() {
@@ -16,12 +18,13 @@ export default function App() {
     const [filterOption, setFilterOption] = useState(null)
     const [filteredData, setFilteredData] = useState(null)
 
+
     const a = () => {
         let carArray = [...cars2.objects]
-        for(let i =0; i < 30; i++){
-          let newCar ={name: 'car' , batteryLevelPct: 0, location: {latitude: 0, longitude: 0,}, rangeKm: 0, status:'AVAILABLE', platesNumber:'dw12345'}
-          let randomLatiNumber = Math.random()*4 - 1
-          let randomLongiNumber = Math.random()*4 - 1
+        for(let i =0; i < numbOfCars; i++){
+          let newCar ={name: 'Skoda Fabia' , batteryLevelPct: 0, location: {latitude: 0, longitude: 0,}, rangeKm: 0, status:'AVAILABLE', platesNumber:'dw12345'}
+          let randomLatiNumber = Math.random()*4- 1
+          let randomLongiNumber = Math.random()*6 - 1
           let batteryStatus = Math.floor(Math.random()*100)
           let rangeKmStatus = Math.floor(Math.random()*400)
           let carStatus = (Math.random()>=0.5)? 1 : 0;

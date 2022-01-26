@@ -8,7 +8,7 @@ const SortPanel = ({data, setFilterOption, filterOption}) => {
     }
 
     return ( <aside className='sortPanel'>
-        <p className='sortPanel__title'>Sortuj wg</p>
+        <p className='sortPanel__title'>Wyszukaj auto</p>
         <div className='sortPanel__modul'>
                 <label className='sortPanel__label'>
                     <input className='sortPanel__input' type="checkbox" checked={filterOption === 'ALL'} onChange={() => {
