@@ -94,15 +94,14 @@ footer {
     .showBurger {
         display: block;
     }
-}
-
-.none {
-    display: none;
-}
-
-.active {
-    display: block;
-    width: 100%;
+    .none {
+        display: none;
+    }
+    
+    .active {
+        display: block;
+        width: 100%;
+    }
 }
 
 .sortPanel__title {
