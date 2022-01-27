@@ -4,7 +4,8 @@ import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Main from "./layout/Main";
 // import cars from './map.json'
-import PopUp from "./PopUp";
+import PopUp from "./Popup/PopUp";
+import { parkingDetails } from "./Popup/subcomponents/parkingDetails";
 
 const numbOfCars = 500;
 const numbOfParkings = 100;
@@ -214,7 +215,8 @@ export default function App() {
         return "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
         break;
       case "PARKING":
-        return "https://developers.google.com/maps/documentation/javascript/examples/full/images/parking_lot_maps.png";
+        // return "https://developers.google.com/maps/documentation/javascript/examples/full/images/parking_lot_maps.png";
+        return "http://maps.google.com/mapfiles/ms/icons/gas.png"
         break;
       case "LIBRARY":
         return "https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png";
@@ -235,7 +237,7 @@ export default function App() {
     const carStatus =
       filteredData &&
       filteredData.map((el) => {
-        let locationsList = filteredData.map((el) => {
+        let locationsList = poiData.map((el) => {
           const lati = Number(el.location.latitude).toFixed(6);
           const longi = Number(el.location.longitude).toFixed(6);
           return {

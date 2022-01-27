@@ -159,10 +159,10 @@ footer {
 
 @media (max-width: 576px) {
   .popupinfo {
-    top: 100px;
+    top: 30px;
     right: 10px;
     left: 10px;
-    bottom: 100px;
+    bottom: 30px;
   }
 }
 

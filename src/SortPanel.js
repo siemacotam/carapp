@@ -110,7 +110,7 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
         </label>
       </div>
       <div className="sortPanel__modul">
-        <p className="sortPanel__subtitle">Parkingi</p>
+        <p className="sortPanel__subtitle">Stacje benzynowe</p>
         <label className="sortPanel__label">
           <input
             className="sortPanel__input"
@@ -121,11 +121,11 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
               setFilterOption("PARKING");
             }}
           />
-          Pokaż parkingi
+          Pokaż stacje
         </label>
       </div>
       <div className="sortPanel__modul">
-        <p className="sortPanel__subtitle">Parkingi</p>
+        <p className="sortPanel__subtitle">Poi</p>
         <label className="sortPanel__label">
           <input
             className="sortPanel__input"
