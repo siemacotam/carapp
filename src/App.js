@@ -117,7 +117,6 @@ export default function App() {
   useEffect(() => {
     setMarkers(makeMarkers());
     // setLocations(makeMarkers())
-    console.log(carsData, parkingData, poiData)
   }, [filteredData]);
 
 

@@ -1,0 +1,21 @@
+header {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    /* border-radius: 0.25rem; */
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+  }
+  header h1 {
+    font-family: "Montserrat, sans-serif";
+    margin-left: 30px;
+    color: white;
+  }
+
+  .showBurger {
+    display: none;
+  }
+
+  

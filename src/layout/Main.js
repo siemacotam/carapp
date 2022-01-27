@@ -1,6 +1,7 @@
 import React from "react";
-import GoogleMapContainer from "../siema";
+import GoogleMapContainer from "../GoogleMapContainer";
 import SortPanel from "../SortPanel/SortPanel";
+import './style/Main.css'
 
 const Main = ({
   markers,
@@ -31,7 +32,6 @@ const Main = ({
           setGoogleMapRef={setGoogleMapRef}
         />
       </div>
-      {/* <Mapa /> */}
     </main>
   );
 };

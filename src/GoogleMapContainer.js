@@ -61,6 +61,8 @@ export default class GoogleMapContainer extends Component {
       });
     };
 
+    console.log(this.googleMapRef ? this.googleMapRef : 'siema')
+
 
     
 
