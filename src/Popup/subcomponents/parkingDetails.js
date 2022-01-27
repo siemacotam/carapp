@@ -1,17 +1,11 @@
 import React from 'react';
 import gas from "../../images/gasstation.jpg";
+import { closeButton } from './closeButton';
 
 export const parkingDetails = (setIsOpen, data) => { 
     return <div className="popupinfo">
 <div className="popup__wrap">
-  <button
-    className="popup__button"
-    onClick={() => {
-      setIsOpen(false);
-    }}
-  >
-    x
-  </button>
+  {closeButton(setIsOpen)}
   <div className="popup__title-wrap">
     <p className="popup__title">{data && data.name}</p>
     <p>

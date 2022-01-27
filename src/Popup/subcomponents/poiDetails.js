@@ -3,6 +3,7 @@ import bed from "../../images/bed.jpg";
 import food from "../../images/food.jpg";
 import info from "../../images/info.jpg";
 import book from "../../images/book.jpg";
+import { closeButton } from './closeButton';
 
 const kindOfImg = (data) => {
     switch (data.status) {
@@ -23,14 +24,7 @@ const kindOfImg = (data) => {
   export const poiDetails = (setIsOpen, data) => {
       return <div className="popupinfo">
       <div className="popup__wrap">
-        <button
-          className="popup__button"
-          onClick={() => {
-            setIsOpen(false);
-          }}
-        >
-          x
-        </button>
+        {closeButton(setIsOpen)}
         <div className="popup__title-wrap">
           <p className="popup__title">{data && data.name}</p>
           <p>

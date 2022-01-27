@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleMapContainer from "../siema";
-import SortPanel from "../SortPanel";
+import SortPanel from "../SortPanel/SortPanel";
 
 const Main = ({
   markers,
