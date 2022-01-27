@@ -4,7 +4,6 @@ import SortPanel from "../SortPanel/SortPanel";
 import './style/Main.css'
 
 const Main = ({
-  markers,
   data,
   setFilterOption,
   filterOption,
@@ -23,7 +22,6 @@ const Main = ({
       />
       <div className="mapWrapper">
         <GoogleMapContainer
-          markers={markers}
           data={data}
           setIsOpen={setIsOpen}
           setData={setData}

@@ -17,7 +17,7 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
       label: `Schowaj pojazdy`
     },
     {
-      filterTxt: "AVAIABLE",
+      filterTxt: "AVAILABLE",
       label: `Wolne (${data && data.filter((i) => i.status === "AVAILABLE").length})`
     },
     {

@@ -53,7 +53,7 @@ export default class GoogleMapContainer extends Component {
           google.maps.event.addListener(item, "click", location.fn);
           return item;
         });
-      let markerCluster = new MarkerClusterer(map, markers, {
+      this.markerCluster = new MarkerClusterer(map, markers, {
         imagePath:
           "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
         gridSize: 60,
@@ -61,7 +61,19 @@ export default class GoogleMapContainer extends Component {
       });
     };
 
-    console.log(this.googleMapRef ? this.googleMapRef : 'siema')
+    if (this.googleMapRef) {
+      let locations = this.props.locations
+      console.log('locations w propsie')
+   
+      let markers = locations &&   
+      locations.map((location) => {
+      let item = new this.googleRef.Marker({position: location.position, icon:  location.icon })
+      google.maps.event.addListener(item, 'click', location.fn)
+      return item
+      })
+      this.markerCluster.clearMarkers()
+      this.markerCluster.addMarkers(markers)
+     }
 
 
     

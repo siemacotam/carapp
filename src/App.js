@@ -10,11 +10,10 @@ import { createPOI } from "./utils/createPoi";
 import { typeOfIcon } from "./utils/typeOfIcon";
 
 export const numbOfCars = 500;
-export const numbOfParkings = 100;
+export const numbOfParkings = 200;
 export const numbOfPoi = 200;
 
 export default function App() {
-  const [markers, setMarkers] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState(null);
   const [carsData, setCarsData] = useState(null);
@@ -70,11 +69,14 @@ export default function App() {
   };
 
 
-  const makeMarkers = () => {
-    const carStatus =
+  const makeLocations = () => {
+    if(filteredData.length === 0){
+        setLocations([])
+    }
+
+    const locationsToShow =
       filteredData &&
       filteredData.map((el) => {
-        let locationsList = filteredData.map((el) => {
           const lati = Number(el.location.latitude).toFixed(6);
           const longi = Number(el.location.longitude).toFixed(6);
           return {
@@ -85,25 +87,8 @@ export default function App() {
               setData(el);
             },
           };
-        });
-        setLocations(locationsList);
-        console.log("locations zaktualizowane", locationsList.length);
-
-        const lati = Number(el.location.latitude).toFixed(6);
-        const longi = Number(el.location.longitude).toFixed(6);
-        return (
-          <Marker
-            key={el.platesNumber}
-            position={{ lat: Number(lati), lng: Number(longi) }}
-            onClick={() => {
-              setIsOpen(true);
-              setData(el);
-            }}
-            icon={typeOfIcon(el.status)}
-          />
-        );
       });
-    return carStatus;
+      setLocations(locationsToShow)
   };
 
   useEffect(() => {
@@ -115,8 +100,7 @@ export default function App() {
     filterData();
   }, [filterOption]);
   useEffect(() => {
-    setMarkers(makeMarkers());
-    // setLocations(makeMarkers())
+    makeLocations();
   }, [filteredData]);
 
 
@@ -124,7 +108,6 @@ export default function App() {
     <div className="appWrap">
       <Header />
       <Main
-        markers={filteredData}
         data={carsData}
         setFilterOption={setFilterOption}
         filterOption={filterOption}
