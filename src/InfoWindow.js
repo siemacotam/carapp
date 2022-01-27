@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const InfoWindow = () => {
-    return ( <div>siema</div> );
-}
- 
+  return <div>siema</div>;
+};
+
 export default InfoWindow;

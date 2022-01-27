@@ -25,7 +25,7 @@ module.exports = {
         test: /\.(png|jpe?g|jpg|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
           },
         ],
       },
@@ -46,8 +46,8 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        enforce: 'pre',
-        use: ['source-map-loader'],
+        enforce: "pre",
+        use: ["source-map-loader"],
       },
     ],
   },
@@ -56,7 +56,7 @@ module.exports = {
       template: "./src/index.html",
     }),
     new SourceMapDevToolPlugin({
-      filename: "[file].map"
+      filename: "[file].map",
     }),
   ],
 };

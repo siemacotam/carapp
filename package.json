@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "webpack",
     "start": "webpack serve --mode development"
   },
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google/markerclusterer": "^2.0.9",
     "@googlemaps/markerclusterer": "^1.0.21",
     "@react-google-maps/api": "^2.7.0",
     "google-map-react": "^2.1.10",
