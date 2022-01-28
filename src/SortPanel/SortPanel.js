@@ -45,7 +45,7 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
     },
     {
       filterTxt: "PARKING",
-      label: `Pokaż stacje`,
+      label: `Pokaż parkingi`,
     },
     {
       filterTxt: "POI",
@@ -89,6 +89,7 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
   return (
     <aside className="sortPanel">
       <p className="sortPanel__title">Wyszukaj auto</p>
+      <div className="sortPanel__panelwrap">
       <div className="sortPanel__modul">
         {correctLabel(filterOptions[0])}
         {correctLabel(filterOptions[1])}
@@ -104,8 +105,10 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
         {correctLabel(filterOptions[5])}
         {correctLabel(filterOptions[6])}
       </div>
+      </div>
+      <div className="sortPanel__panelwrap">
       <div className="sortPanel__modul">
-        <p className="sortPanel__subtitle">Stacje benzynowe</p>
+        <p className="sortPanel__subtitle">Parkingi</p>
         {correctLabel(filterOptions[7])}
       </div>
       <div className="sortPanel__modul">
@@ -115,6 +118,7 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
         {correctLabel(filterOptions[10])}
         {correctLabel(filterOptions[11])}
         {correctLabel(filterOptions[12])}
+      </div>
       </div>
     </aside>
   );

@@ -28,8 +28,8 @@ export const poiDetails = (setIsOpen, data) => {
         {closeButton(setIsOpen)}
         <div className="popup__title-wrap">
           <p className="popup__title">{data && data.name}</p>
-          <p>
-            Status: <span className="green">Otwarta. Zapraszamy !</span>
+          <p className="popup__status">
+            Status: <span className="green">Otwarte. Zapraszamy !</span>
           </p>
         </div>
         <div>
@@ -51,6 +51,7 @@ export const poiDetails = (setIsOpen, data) => {
           {howManyOpinion} opini)
         </p>
       </div>
+      <button className="btn">Nawiguj</button>
     </div>
   );
 };

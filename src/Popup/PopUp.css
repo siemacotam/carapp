@@ -34,6 +34,12 @@
     background-color: black;
     color: white;
   }
+
+  .popup__status {
+      padding: 7px;
+      font-weight: bold;
+      background-color: #F6F6F8;
+  }
   
   .popup__button {
     position: absolute;
@@ -59,6 +65,7 @@
     border-bottom: 1px solid #c2dde6;
     padding: 10px;
     margin: 4px 0;
+    background-color: #E3E3E3;
   }
 
 
@@ -76,7 +83,7 @@
 }
 
 .popup__img {
-  width: 40%;
+  width: 30%;
   margin-top: 20px;
 }
 @media (max-width: 876px) {

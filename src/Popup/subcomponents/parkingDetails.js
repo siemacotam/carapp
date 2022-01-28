@@ -1,20 +1,22 @@
 import React from "react";
-import gas from "../../images/gasstation.jpg";
+import parking from "../../images/parking.jpg";
 import { closeButton } from "./closeButton";
 
 export const parkingDetails = (setIsOpen, data) => {
+
+    const numberOfPlaces = Math.floor(Math.random()*200 + 50)
   return (
     <div className="popupinfo">
       <div className="popup__wrap">
         {closeButton(setIsOpen)}
         <div className="popup__title-wrap">
           <p className="popup__title">{data && data.name}</p>
-          <p>
-            Status: <span className="green">Otwarta. Zapraszamy !</span>
+          <p className="popup__status">
+            Status: <span className="green">Otwarty. Zapraszamy !</span>
           </p>
         </div>
         <div>
-          <img className="popup__img" src={gas} alt="logo" />
+          <img className="popup__img" src={parking} alt="logo" />
         </div>
       </div>
       <div className="popup__info">
@@ -24,7 +26,10 @@ export const parkingDetails = (setIsOpen, data) => {
         <p className="popup__text">
           {data.location.latitude}, {data.location.longitude}{" "}
         </p>
+        <p className="popup__text">Liczba miejsc parkingowych :</p>
+        <p className="popup__text">{numberOfPlaces}</p>
       </div>
+      <button className="btn">Nawiguj</button>
     </div>
   );
 };

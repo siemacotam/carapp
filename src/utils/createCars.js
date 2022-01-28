@@ -13,8 +13,8 @@ export const createCars = (setCarsData, setFilteredData, setFilterOption) => {
       platesNumber: "dw12345",
       discriminator: "vehicle",
     };
-    let randomLatiNumber = Math.random() * 4 - 1;
-    let randomLongiNumber = Math.random() * 6 - 1;
+    let randomLatiNumber = Math.random() * 6 - 1;
+    let randomLongiNumber = Math.random() * 8 - 1;
     let batteryStatus = Math.floor(Math.random() * 100);
     let rangeKmStatus = Math.floor(Math.random() * 400);
     let carStatus = Math.random() >= 0.5 ? 1 : 0;

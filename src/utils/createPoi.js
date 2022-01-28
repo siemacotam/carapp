@@ -29,8 +29,8 @@ export const createPOI = (setPoiData) => {
         newPoi.status = "BED";
         break;
     }
-    let randomLatiNumber = Math.random() * 4 - 1;
-    let randomLongiNumber = Math.random() * 6 - 1;
+    let randomLatiNumber = Math.random() * 6 - 1;
+    let randomLongiNumber = Math.random() * 8 - 1;
     newPoi.location.latitude =
       car.objects[0].location.latitude - randomLatiNumber;
     newPoi.location.longitude =

@@ -66,24 +66,24 @@ export default function App() {
       case "25":
         setFilteredData(carsData.filter((i) => i.batteryLevelPct > 25));
         break;
-    //   case "PARKING":
-    //     setFilteredData(parkingData);
-    //     break;
-    //   case "POI":
-    //     setFilteredData(poiData);
-    //     break;
-    //   case "INFO":
-    //     setFilteredData(poiData.filter((i) => i.status === "INFO"));
-    //     break;
-    //   case "FOOD":
-    //     setFilteredData(poiData.filter((i) => i.status === "FOOD"));
-    //     break;
-    //   case "BED":
-    //     setFilteredData(poiData.filter((i) => i.status === "BED"));
-    //     break;
-    //   case "LIBRARY":
-    //     setFilteredData(poiData.filter((i) => i.status === "LIBRARY"));
-    //     break;
+      case "PARKING":
+        setFilteredData(parkingData);
+        break;
+      case "POI":
+        setFilteredData(poiData);
+        break;
+      case "INFO":
+        setFilteredData(poiData.filter((i) => i.status === "INFO"));
+        break;
+      case "FOOD":
+        setFilteredData(poiData.filter((i) => i.status === "FOOD"));
+        break;
+      case "BED":
+        setFilteredData(poiData.filter((i) => i.status === "BED"));
+        break;
+      case "LIBRARY":
+        setFilteredData(poiData.filter((i) => i.status === "LIBRARY"));
+        break;
     }
 
     // setFilteredData(data)

@@ -9,7 +9,7 @@ export const carDetails = (setIsOpen, data) => {
         {closeButton(setIsOpen)}
         <div className="popup__title-wrap">
           <p className="popup__title">{data && data.name}</p>
-          <p>
+          <p className="popup__status">
             Status:{" "}
             <span
               className={data && data.status === "AVAILABLE" ? "green" : "red"}

@@ -5,16 +5,13 @@ export const createParkings = (setParkingData) => {
   let parkingArray = [];
   for (let i = 0; i < numbOfParkings; i++) {
     let newParking = {
-      name: "CPN",
-      PB95: 6.5,
+      name: "Parking całodobowy",
       location: { latitude: 0, longitude: 0 },
-      PB98: 7.2,
-      diesel: 6.3,
       discriminator: "parking",
       status: "PARKING",
     };
-    let randomLatiNumber = Math.random() * 4 - 1;
-    let randomLongiNumber = Math.random() * 6 - 1;
+    let randomLatiNumber = Math.random() * 6 - 1;
+    let randomLongiNumber = Math.random() * 8 - 1;
     newParking.location.latitude =
       car.objects[0].location.latitude - randomLatiNumber;
     newParking.location.longitude =

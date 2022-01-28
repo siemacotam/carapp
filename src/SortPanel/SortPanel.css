@@ -35,3 +35,19 @@ font-family: 'Montserrat', sans-serif;
   padding: 5px;
   border-bottom: 2px solid #e3e3e3;
 }
+
+@media (max-width: 876px) {
+    .sortPanel__title{
+        font-size: 1.5rem;
+    }
+    .sortPanel__subtitle {
+        padding: 3px;
+    }
+    .sortPanel__label {
+        padding: 3px;
+        font-size: 0.8rem;
+    }
+    .sortPanel__modul {
+        padding: 5px 0 0 0;
+      }
+  }

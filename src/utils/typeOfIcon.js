@@ -5,7 +5,7 @@ export const typeOfIcon = (data) => {
     case "TAKEN":
       return "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
     case "PARKING":
-      return "http://maps.google.com/mapfiles/ms/icons/gas.png";
+      return "https://maps.gstatic.com/mapfiles/ms2/micons/parkinglot.png";
     case "LIBRARY":
       return "https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png";
     case "INFO":

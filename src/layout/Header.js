@@ -1,10 +1,14 @@
 import React from "react";
 import "./style/Header.css";
+import caricon from '../images/caricon.png'
 
 const Header = () => {
   return (
     <header>
-      <h1>Find my car</h1>
+      <div className="header__logo">
+        <img className="header__img" src={caricon} alt="" />
+      <h1 className="header__title">Find my car</h1>
+      </div>
       <button
         className="showBurger btn"
         onClick={() => {
