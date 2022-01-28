@@ -18,10 +18,9 @@ const kindOfImg = (data) => {
   }
 };
 
-const rate = Math.floor(Math.random() * 3 + 2);
-const howManyOpinion = Math.floor(Math.random() * 1000);
-
 export const poiDetails = (setIsOpen, data) => {
+  const rate = Math.floor(Math.random() * 3 + 2);
+  const howManyOpinion = Math.floor(Math.random() * 1000);
   return (
     <div className="popupinfo">
       <div className="popup__wrap">
@@ -37,15 +36,15 @@ export const poiDetails = (setIsOpen, data) => {
         </div>
       </div>
       <div className="popup__info">
-        <p className="popup__text">Lokalizacja :</p>
+        <p className="popup__text bold">Lokalizacja :</p>
         <p className="popup__text">
           {data.location.latitude}, {data.location.longitude}{" "}
         </p>
-        <p className="popup__text">Godziny otwarcia :</p>
+        <p className="popup__text bold">Godziny otwarcia :</p>
         <p className="popup__text">
           Zapraszamy 8-18 / od poniedziałku do piątku
         </p>
-        <p className="popup__text">Średnia ocen :</p>
+        <p className="popup__text bold">Średnia ocen :</p>
         <p className="popup__text">
           <span className={rate < 3 ? "red" : "green"}>{rate}</span> (
           {howManyOpinion} opini)

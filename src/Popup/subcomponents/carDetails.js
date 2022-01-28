@@ -23,17 +23,17 @@ export const carDetails = (setIsOpen, data) => {
         </div>
       </div>
       <div className="popup__info">
-        <p className="popup__text">Lokalizacja :</p>
+        <p className="popup__text bold">Lokalizacja</p>
         <p className="popup__text">
           {data.location.latitude}, {data.location.longitude}{" "}
         </p>
-        <p className="popup__text">Status baterii :</p>
+        <p className="popup__text bold">Poziom baterii</p>
         <p className="popup__text">{data && data.batteryLevelPct} %</p>
-        <p className="popup__text">tablice </p>
+        <p className="popup__text bold">Tablice rejestracyjne </p>
         <p className="popup__text">{data && data.platesNumber}</p>
-        <p className="popup__text">zasięg </p>
+        <p className="popup__text bold">Zasięg </p>
         <p className="popup__text">{data && data.rangeKm} km</p>
-        <p className="popup__text">cena </p>
+        <p className="popup__text bold">Cena </p>
         <p className="popup__text">
           <span className="green">już od 200 zł</span>
         </p>

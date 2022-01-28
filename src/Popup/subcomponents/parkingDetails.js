@@ -19,13 +19,13 @@ export const parkingDetails = (setIsOpen, data) => {
         </div>
       </div>
       <div className="popup__info">
-        <p className="popup__text">Godziny otwarcia :</p>
+        <p className="popup__text bold">Godziny otwarcia :</p>
         <p className="popup__text">24H / 7 dni w tygodniu</p>
-        <p className="popup__text">Lokalizacja :</p>
+        <p className="popup__text bold">Lokalizacja :</p>
         <p className="popup__text">
           {data.location.latitude}, {data.location.longitude}{" "}
         </p>
-        <p className="popup__text">Liczba miejsc parkingowych :</p>
+        <p className="popup__text bold">Liczba miejsc parkingowych :</p>
         <p className="popup__text">{numberOfPlaces}</p>
       </div>
       <button className="btn">Nawiguj</button>

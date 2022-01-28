@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import MarkerClusterer from "@google/markerclusterer";
+import "./GoogleMapContainer.css";
 
 export default class GoogleMapContainer extends Component {
   state = {
@@ -74,8 +75,8 @@ export default class GoogleMapContainer extends Component {
         bootstrapURLKeys={{ key: `AIzaSyBzQ1DKtNZv04P4Tkml8RonB_sCgWBGWtc` }}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => setGoogleMapRef(map, maps)}
-        defaultCenter={{ lat: 52.193275, lng: 20.930372 }}
-        defaultZoom={7}
+        defaultCenter={{ lat: 51.271239, lng: 18.085767 }}
+        defaultZoom={8}
         options={{ streetViewControl: true }}
       />
     );

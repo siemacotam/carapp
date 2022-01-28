@@ -9,9 +9,9 @@ import { createPOI } from "./utils/createPoi";
 import { filterData } from "./utils/filterData";
 import { makeLocations } from "./utils/makeLocations";
 
-export const numbOfCars = 500;
-export const numbOfParkings = 200;
-export const numbOfPoi = 200;
+export const numbOfCars = 475;
+export const numbOfParkings = 197;
+export const numbOfPoi = 243;
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,21 +21,19 @@ export default function App() {
   const [poiData, setPoiData] = useState(null);
   const [filteredData, setFilteredData] = useState([]);
   const [locations, setLocations] = useState(null);
-const [filterOption, setFilterOption] = useState({
+  const [filterOption, setFilterOption] = useState({
     ALL: false,
-    NONE:false,
-    AVAILABLE:false,
-    TAKEN:false,
-    FULL:false,
-    HALF:false,
-    PARKING:false,
-    LIBRARY:false,
-    BED:false,
-    FOOD:false,
-    INFO:false,
-});
-
-
+    NONE: false,
+    AVAILABLE: false,
+    TAKEN: false,
+    FULL: false,
+    HALF: false,
+    PARKING: false,
+    LIBRARY: false,
+    BED: false,
+    FOOD: false,
+    INFO: false,
+  });
 
   useEffect(() => {
     createCars(setCarsData, setFilteredData, setFilterOption, filterOption);
@@ -43,17 +41,19 @@ const [filterOption, setFilterOption] = useState({
     createPOI(setPoiData);
   }, []);
   useEffect(() => {
-    filterData(filterOption, carsData, parkingData, poiData, setFilteredData, );
+    filterData(filterOption, carsData, parkingData, poiData, setFilteredData);
   }, [filterOption]);
   useEffect(() => {
-    makeLocations(filteredData, setLocations,setData ,setIsOpen);
+    makeLocations(filteredData, setLocations, setData, setIsOpen);
   }, [filteredData]);
 
   return (
     <div className="appWrap">
       <Header />
       <Main
-        data={carsData}
+        carsData={carsData}
+        parkingData={parkingData}
+        poiData={poiData}
         setFilterOption={setFilterOption}
         filterOption={filterOption}
         locations={locations}

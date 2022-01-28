@@ -12,10 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-}
-
-.height {
-  min-height: 100vh;
+  align-items: center;
 }
 
 .green {
@@ -38,7 +35,10 @@ body {
   border-radius: 15px;
   margin: 5px;
   cursor: pointer;
-  /* background-color: #e3e3e3; */
   background-color: black;
   color: white;
+}
+
+.bold {
+  font-weight: bold;
 }

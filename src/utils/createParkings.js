@@ -5,7 +5,7 @@ export const createParkings = (setParkingData) => {
   let parkingArray = [];
   for (let i = 0; i < numbOfParkings; i++) {
     let newParking = {
-      name: "Parking całodobowy",
+      name: "Parking",
       location: { latitude: 0, longitude: 0 },
       discriminator: "parking",
       status: "PARKING",

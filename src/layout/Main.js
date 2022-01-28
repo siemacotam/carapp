@@ -1,29 +1,27 @@
 import React from "react";
-import GoogleMapContainer from "../GoogleMapContainer";
+import GoogleMapContainer from "../GoogleMapContainer/GoogleMapContainer";
 import SortPanel from "../SortPanel/SortPanel";
 import "./style/Main.css";
 
 const Main = ({
-  data,
+  carsData,
   setFilterOption,
   filterOption,
-  setIsOpen,
-  setData,
-  typeOfIcon,
   locations,
-  setGoogleMapRef,
+  parkingData,
+  poiData,
 }) => {
   return (
     <main>
       <SortPanel
-        data={data}
+        carsData={carsData}
         setFilterOption={setFilterOption}
         filterOption={filterOption}
+        parkingData={parkingData}
+        poiData={poiData}
       />
       <div className="mapWrapper">
-        <GoogleMapContainer
-          locations={locations}
-        />
+        <GoogleMapContainer locations={locations} />
       </div>
     </main>
   );
