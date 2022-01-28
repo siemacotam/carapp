@@ -1,7 +1,12 @@
 import { car } from "./carinfo";
 import { numbOfCars } from "../App";
 
-export const createCars = (setCarsData, setFilteredData, setFilterOption) => {
+export const createCars = (
+  setCarsData,
+  setFilteredData,
+  setFilterOption,
+  filterOption
+) => {
   let carArray = [...car.objects];
   for (let i = 0; i < numbOfCars; i++) {
     let newCar = {
@@ -37,6 +42,6 @@ export const createCars = (setCarsData, setFilteredData, setFilterOption) => {
   }
   setCarsData(carArray);
   setFilteredData(carArray);
-  setFilterOption("ALL");
+  setFilterOption({ ...filterOption, ALL: true });
   return carArray;
 };

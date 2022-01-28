@@ -1,11 +1,8 @@
 import React from "react";
 import "./SortPanel.css";
+import { correctLabel } from "./utils/correctLabel";
 
 const SortPanel = ({ data, setFilterOption, filterOption }) => {
-  const closeMenu = () => {
-    document.querySelector(".mapWrapper").classList.toggle("none");
-    document.querySelector(".sortPanel").classList.toggle("active");
-  };
 
   const filterOptions = [
     {
@@ -29,27 +26,18 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
       })`,
     },
     {
-      filterTxt: "75",
+      filterTxt: "FULL",
       label: `Więcej niż 75% (
         ${data && data.filter((i) => i.batteryLevelPct > 75).length})`,
     },
     {
-      filterTxt: "50",
+      filterTxt: "HALF",
       label: `Więcej niż 50% (
         ${data && data.filter((i) => i.batteryLevelPct > 50).length})`,
     },
     {
-      filterTxt: "25",
-      label: `Więcej niż 25% (
-        ${data && data.filter((i) => i.batteryLevelPct > 25).length})`,
-    },
-    {
       filterTxt: "PARKING",
       label: `Pokaż parkingi`,
-    },
-    {
-      filterTxt: "POI",
-      label: `Pokaż poi`,
     },
     {
       filterTxt: "LIBRARY",
@@ -69,56 +57,39 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
     },
   ];
 
-  const correctLabel = (data) => {
-    return (
-      <label className="sortPanel__label">
-        <input
-          className="sortPanel__input"
-          type="checkbox"
-          checked={filterOption === data.filterTxt}
-          onChange={() => {
-            closeMenu();
-            setFilterOption(data.filterTxt);
-          }}
-        />
-        {data.label}
-      </label>
-    );
-  };
+
 
   return (
     <aside className="sortPanel">
       <p className="sortPanel__title">Wyszukaj auto</p>
       <div className="sortPanel__panelwrap">
-      <div className="sortPanel__modul">
-        {correctLabel(filterOptions[0])}
-        {correctLabel(filterOptions[1])}
-      </div>
-      <div className="sortPanel__modul">
-        <p className="sortPanel__subtitle">Wg dostępności</p>
-        {correctLabel(filterOptions[2])}
-        {correctLabel(filterOptions[3])}
-      </div>
-      <div className="sortPanel__modul">
-        <p className="sortPanel__subtitle">Wg poziomu baterii</p>
-        {correctLabel(filterOptions[4])}
-        {correctLabel(filterOptions[5])}
-        {correctLabel(filterOptions[6])}
-      </div>
+        <div className="sortPanel__modul">
+          {correctLabel(filterOptions[0],setFilterOption, filterOption)}
+          {correctLabel(filterOptions[1],setFilterOption, filterOption)}
+        </div>
+        <div className="sortPanel__modul">
+          <p className="sortPanel__subtitle">Wg dostępności</p>
+          {correctLabel(filterOptions[2],setFilterOption, filterOption)}
+          {correctLabel(filterOptions[3],setFilterOption, filterOption)}
+        </div>
+        <div className="sortPanel__modul">
+          <p className="sortPanel__subtitle">Wg poziomu baterii</p>
+          {correctLabel(filterOptions[4],setFilterOption, filterOption)}
+          {correctLabel(filterOptions[5],setFilterOption, filterOption)}
+        </div>
       </div>
       <div className="sortPanel__panelwrap">
-      <div className="sortPanel__modul">
-        <p className="sortPanel__subtitle">Parkingi</p>
-        {correctLabel(filterOptions[7])}
-      </div>
-      <div className="sortPanel__modul">
-        <p className="sortPanel__subtitle">Poi</p>
-        {correctLabel(filterOptions[8])}
-        {correctLabel(filterOptions[9])}
-        {correctLabel(filterOptions[10])}
-        {correctLabel(filterOptions[11])}
-        {correctLabel(filterOptions[12])}
-      </div>
+        <div className="sortPanel__modul">
+          <p className="sortPanel__subtitle">Parkingi</p>
+          {correctLabel(filterOptions[6],setFilterOption, filterOption)}
+        </div>
+        <div className="sortPanel__modul">
+          <p className="sortPanel__subtitle">Poi</p>
+          {correctLabel(filterOptions[7],setFilterOption, filterOption)}
+          {correctLabel(filterOptions[8],setFilterOption, filterOption)}
+          {correctLabel(filterOptions[9],setFilterOption, filterOption)}
+          {correctLabel(filterOptions[10],setFilterOption, filterOption)}
+        </div>
       </div>
     </aside>
   );

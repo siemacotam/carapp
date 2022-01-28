@@ -28,43 +28,43 @@ main {
 }
 
 @media (max-width: 876px) and (orientation: landscape) {
-    .sortPanel {
-        display: none;
-      }
-      .mapWrapper {
-        top: 0;
-        left: 0;
-        margin-left: 10px;
-      }
-      .showBurger {
-        display: block;
-      }
-      .none {
-        display: none;
-      }
-    
-      .active {
-        /* display: block; */
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        width: 100%;
-      }
-      .sortPanel__panelwrap {
-          flex-basis: 49%;
-          border: 1px solid black;
-          margin: 2px;
-      }
-      .sortPanel__title{
-        flex-basis: 100%;
-        height: 40px;
-      }
-      .sortPanel__modul{
-          padding: 0;
-      }
+  .sortPanel {
+    display: none;
+  }
+  .mapWrapper {
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+  }
+  .showBurger {
+    display: block;
+  }
+  .none {
+    display: none;
+  }
+
+  .active {
+    /* display: block; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+  }
+  .sortPanel__panelwrap {
+    flex-basis: 49%;
+    border: 1px solid black;
+    margin: 2px;
+  }
+  .sortPanel__title {
+    flex-basis: 100%;
+    height: 40px;
+  }
+  .sortPanel__modul {
+    padding: 0;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 876px) and (orientation: portrait) {
   .sortPanel {
     display: none;
   }

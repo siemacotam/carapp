@@ -7,9 +7,8 @@ footer {
 }
 
 @media (max-width: 876px) and (orientation: landscape) {
-    footer {
-        padding: 2px;
-        font-size: 0.7rem;
-    }
+  footer {
+    padding: 2px;
+    font-size: 0.7rem;
+  }
 }
-

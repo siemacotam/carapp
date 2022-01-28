@@ -22,12 +22,7 @@ const Main = ({
       />
       <div className="mapWrapper">
         <GoogleMapContainer
-          data={data}
-          setIsOpen={setIsOpen}
-          setData={setData}
-          typeOfIcon={typeOfIcon}
           locations={locations}
-          setGoogleMapRef={setGoogleMapRef}
         />
       </div>
     </main>

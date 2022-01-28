@@ -3,8 +3,7 @@ import parking from "../../images/parking.jpg";
 import { closeButton } from "./closeButton";
 
 export const parkingDetails = (setIsOpen, data) => {
-
-    const numberOfPlaces = Math.floor(Math.random()*200 + 50)
+  const numberOfPlaces = Math.floor(Math.random() * 200 + 50);
   return (
     <div className="popupinfo">
       <div className="popup__wrap">

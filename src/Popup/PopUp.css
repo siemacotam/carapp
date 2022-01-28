@@ -10,64 +10,65 @@
 }
 
 .popupinfo {
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    left: 50px;
-    bottom: 50px;
-    /* background-color: #e3e3e3; */
-    background-color: white;
-    text-align: center;
-    border-radius: 15px;
-    z-index: 101;
-  }
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  left: 50px;
+  bottom: 50px;
+  /* background-color: #e3e3e3; */
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+  z-index: 101;
+}
 
 .popup__title {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 2rem;
-    flex-grow: 1;
-    padding: 13px 0;
-    margin-bottom: 15px;
-    /* background-color: #f6f6f8; */
-    background-color: black;
-    color: white;
-  }
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  flex-grow: 1;
+  padding: 13px 0;
+  margin-bottom: 15px;
+  /* background-color: #f6f6f8; */
+  background-color: black;
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
 
-  .popup__status {
-      padding: 7px;
-      font-weight: bold;
-      background-color: #F6F6F8;
-  }
-  
-  .popup__button {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    /* color: white; */
-    font-size: 1rem;
-    height: 40px;
-    width: 40px;
-    /* background-color: #c2dde6; */
-    background-color: white;
-  }
-  
-  .popup__info {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .popup__text {
-    flex-basis: 50%;
-    border-bottom: 1px solid #c2dde6;
-    padding: 10px;
-    margin: 4px 0;
-    background-color: #E3E3E3;
-  }
+.popup__status {
+  padding: 7px;
+  font-weight: bold;
+  background-color: #f6f6f8;
+}
 
+.popup__button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  /* color: white; */
+  font-size: 1rem;
+  height: 30px;
+  width: 30px;
+  /* background-color: #c2dde6; */
+  background-color: white;
+}
+
+.popup__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.popup__text {
+  flex-basis: 50%;
+  border-bottom: 1px solid #c2dde6;
+  padding: 10px;
+  margin: 4px 0;
+  background-color: #e3e3e3;
+}
 
 @media (max-width: 576px) {
   .popupinfo {
@@ -93,7 +94,7 @@
 }
 @media (max-width: 576px) {
   .popup__img {
-    width: 80%;
+    width: 60%;
   }
 }
 .popup__title-wrap {
