@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMapContainer from "../GoogleMapContainer";
 import SortPanel from "../SortPanel/SortPanel";
-import './style/Main.css'
+import "./style/Main.css";
 
 const Main = ({
   data,
@@ -11,7 +11,7 @@ const Main = ({
   setData,
   typeOfIcon,
   locations,
-  setGoogleMapRef
+  setGoogleMapRef,
 }) => {
   return (
     <main>

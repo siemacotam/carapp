@@ -10,7 +10,7 @@ body,
   height: 100vh;
 }
 body {
-  background-color: #f6f6f8;
+  background-color: #E3E3E3;
 }
 
 .appWrap {
@@ -34,10 +34,12 @@ body {
 }
 
 .btn {
-  padding: 10px;
-  background-color: #e3e3e3;
+  padding: 10px 15px;
   border: none;
   border-radius: 15px;
   margin: 10px;
   cursor: pointer;
+  /* background-color: #e3e3e3; */
+  background-color: black;
+  color: white;
 }

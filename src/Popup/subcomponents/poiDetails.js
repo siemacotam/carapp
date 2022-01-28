@@ -1,28 +1,29 @@
-import React from 'react';
+import React from "react";
 import bed from "../../images/bed.jpg";
 import food from "../../images/food.jpg";
 import info from "../../images/info.jpg";
 import book from "../../images/book.jpg";
-import { closeButton } from './closeButton';
+import { closeButton } from "./closeButton";
 
 const kindOfImg = (data) => {
-    switch (data.status) {
-      case "INFO":
-        return info;
-      case "FOOD":
-        return food;
-      case "BED":
-        return bed;
-      case "LIBRARY":
-        return book;
-    }
-  };
+  switch (data.status) {
+    case "INFO":
+      return info;
+    case "FOOD":
+      return food;
+    case "BED":
+      return bed;
+    case "LIBRARY":
+      return book;
+  }
+};
 
-  const rate = Math.floor(Math.random() * 3 + 2);
-  const howManyOpinion = Math.floor(Math.random() * 1000);
+const rate = Math.floor(Math.random() * 3 + 2);
+const howManyOpinion = Math.floor(Math.random() * 1000);
 
-  export const poiDetails = (setIsOpen, data) => {
-      return <div className="popupinfo">
+export const poiDetails = (setIsOpen, data) => {
+  return (
+    <div className="popupinfo">
       <div className="popup__wrap">
         {closeButton(setIsOpen)}
         <div className="popup__title-wrap">
@@ -51,5 +52,5 @@ const kindOfImg = (data) => {
         </p>
       </div>
     </div>
-  }
-  
+  );
+};

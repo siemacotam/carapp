@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 
 export const closeButton = (setIsOpen) => {
-    return <button
-    className="popup__button"
-    onClick={() => {
-      setIsOpen(false);
-    }}
-  >
-    x
-  </button>
-}
+  return (
+    <button
+      className="popup__button"
+      onClick={() => {
+        setIsOpen(false);
+      }}
+    >
+      x
+    </button>
+  );
+};

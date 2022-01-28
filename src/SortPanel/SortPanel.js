@@ -1,5 +1,5 @@
 import React from "react";
-import './SortPanel.css'
+import "./SortPanel.css";
 
 const SortPanel = ({ data, setFilterOption, filterOption }) => {
   const closeMenu = () => {
@@ -10,75 +10,81 @@ const SortPanel = ({ data, setFilterOption, filterOption }) => {
   const filterOptions = [
     {
       filterTxt: "ALL",
-      label: `Wszystkie (${data && data.filter((i) => i).length})`
+      label: `Wszystkie (${data && data.filter((i) => i).length})`,
     },
     {
       filterTxt: "NONE",
-      label: `Schowaj pojazdy`
+      label: `Schowaj pojazdy`,
     },
     {
       filterTxt: "AVAILABLE",
-      label: `Wolne (${data && data.filter((i) => i.status === "AVAILABLE").length})`
+      label: `Wolne (${
+        data && data.filter((i) => i.status === "AVAILABLE").length
+      })`,
     },
     {
       filterTxt: "TAKEN",
-      label: `Zajęte(${data && data.filter((i) => i.status === "TAKEN").length})`
+      label: `Zajęte(${
+        data && data.filter((i) => i.status === "TAKEN").length
+      })`,
     },
     {
       filterTxt: "75",
       label: `Więcej niż 75% (
-        ${data && data.filter((i) => i.batteryLevelPct > 75).length})`
+        ${data && data.filter((i) => i.batteryLevelPct > 75).length})`,
     },
     {
       filterTxt: "50",
       label: `Więcej niż 50% (
-        ${data && data.filter((i) => i.batteryLevelPct > 50).length})`
+        ${data && data.filter((i) => i.batteryLevelPct > 50).length})`,
     },
     {
       filterTxt: "25",
       label: `Więcej niż 25% (
-        ${data && data.filter((i) => i.batteryLevelPct > 25).length})`
+        ${data && data.filter((i) => i.batteryLevelPct > 25).length})`,
     },
     {
       filterTxt: "PARKING",
-      label: `Pokaż stacje`
+      label: `Pokaż stacje`,
     },
     {
       filterTxt: "POI",
-      label: `Pokaż poi`
+      label: `Pokaż poi`,
     },
     {
       filterTxt: "LIBRARY",
-      label: `Pokaż biblioteki`
+      label: `Pokaż biblioteki`,
     },
     {
       filterTxt: "BED",
-      label: `Pokaż hotele`
+      label: `Pokaż hotele`,
     },
     {
       filterTxt: "FOOD",
-      label: `Pokaż restauracje`
+      label: `Pokaż restauracje`,
     },
     {
       filterTxt: "INFO",
-      label: `Pokaż punkty informacyjne`
+      label: `Pokaż punkty informacyjne`,
     },
-  ]
+  ];
 
   const correctLabel = (data) => {
-    return <label className="sortPanel__label">
-    <input
-      className="sortPanel__input"
-      type="checkbox"
-      checked={filterOption === data.filterTxt}
-      onChange={() => {
-        closeMenu();
-        setFilterOption(data.filterTxt);
-      }}
-    />
-    {data.label}
-  </label>
-  }
+    return (
+      <label className="sortPanel__label">
+        <input
+          className="sortPanel__input"
+          type="checkbox"
+          checked={filterOption === data.filterTxt}
+          onChange={() => {
+            closeMenu();
+            setFilterOption(data.filterTxt);
+          }}
+        />
+        {data.label}
+      </label>
+    );
+  };
 
   return (
     <aside className="sortPanel">

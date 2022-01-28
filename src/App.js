@@ -1,4 +1,3 @@
-import { Marker } from "google-maps-react";
 import React, { useEffect, useState } from "react";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
@@ -23,8 +22,28 @@ export default function App() {
   const [filteredData, setFilteredData] = useState([]);
   const [locations, setLocations] = useState(null);
 
-
   const filterData = () => {
+    // const data = []
+
+    // if(filterOption === 'PARKING'){data.push(parkingData)}
+    // switch(filterOption){
+    //     case "POI":
+    //     data.push(poiData);
+    //     break;
+    //   case "INFO":
+    //     data.push(poiData.filter((i) => i.status === "INFO"));
+    //     break;
+    //   case "FOOD":
+    //     data.push(poiData.filter((i) => i.status === "FOOD"));
+    //     break;
+    //   case "BED":
+    //     data.push(poiData.filter((i) => i.status === "BED"));
+    //     break;
+    //   case "LIBRARY":
+    //     data.push(poiData.filter((i) => i.status === "LIBRARY"));
+    //     break;
+    // }
+
     switch (filterOption) {
       case "ALL":
         setFilteredData(carsData);
@@ -47,54 +66,55 @@ export default function App() {
       case "25":
         setFilteredData(carsData.filter((i) => i.batteryLevelPct > 25));
         break;
-      case "PARKING":
-        setFilteredData(parkingData);
-        break;
-      case "POI":
-        setFilteredData(poiData);
-        break;
-      case "INFO":
-        setFilteredData(poiData.filter((i) => i.status === "INFO"));
-        break;
-      case "FOOD":
-        setFilteredData(poiData.filter((i) => i.status === "FOOD"));
-        break;
-      case "BED":
-        setFilteredData(poiData.filter((i) => i.status === "BED"));
-        break;
-      case "LIBRARY":
-        setFilteredData(poiData.filter((i) => i.status === "LIBRARY"));
-        break;
+    //   case "PARKING":
+    //     setFilteredData(parkingData);
+    //     break;
+    //   case "POI":
+    //     setFilteredData(poiData);
+    //     break;
+    //   case "INFO":
+    //     setFilteredData(poiData.filter((i) => i.status === "INFO"));
+    //     break;
+    //   case "FOOD":
+    //     setFilteredData(poiData.filter((i) => i.status === "FOOD"));
+    //     break;
+    //   case "BED":
+    //     setFilteredData(poiData.filter((i) => i.status === "BED"));
+    //     break;
+    //   case "LIBRARY":
+    //     setFilteredData(poiData.filter((i) => i.status === "LIBRARY"));
+    //     break;
     }
+
+    // setFilteredData(data)
   };
 
-
   const makeLocations = () => {
-    if(filteredData.length === 0){
-        setLocations([])
+    if (filteredData.length === 0) {
+      setLocations([]);
     }
 
     const locationsToShow =
       filteredData &&
       filteredData.map((el) => {
-          const lati = Number(el.location.latitude).toFixed(6);
-          const longi = Number(el.location.longitude).toFixed(6);
-          return {
-            position: { lat: Number(lati), lng: Number(longi) },
-            icon: typeOfIcon(el.status),
-            fn: () => {
-              setIsOpen(true);
-              setData(el);
-            },
-          };
+        const lati = Number(el.location.latitude).toFixed(6);
+        const longi = Number(el.location.longitude).toFixed(6);
+        return {
+          position: { lat: Number(lati), lng: Number(longi) },
+          icon: typeOfIcon(el.status),
+          fn: () => {
+            setIsOpen(true);
+            setData(el);
+          },
+        };
       });
-      setLocations(locationsToShow)
+    setLocations(locationsToShow);
   };
 
   useEffect(() => {
-    createCars( setCarsData, setFilteredData, setFilterOption);
-    createParkings( setParkingData);
-    createPOI( setPoiData);
+    createCars(setCarsData, setFilteredData, setFilterOption);
+    createParkings(setParkingData);
+    createPOI(setPoiData);
   }, []);
   useEffect(() => {
     filterData();
@@ -102,7 +122,6 @@ export default function App() {
   useEffect(() => {
     makeLocations();
   }, [filteredData]);
-
 
   return (
     <div className="appWrap">

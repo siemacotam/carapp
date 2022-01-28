@@ -20,13 +20,6 @@ export default class GoogleMapContainer extends Component {
       this.setState({ locationsToShow: this.props.locations });
     }
   }
-  shouldComponentUpdate(nextProps){
-    if (nextProps.locations !== this.props.locations) {
-      return true;
-    } else {
-      return false;
-    }
-  }
 
   static defaultProps = {
     center: {
@@ -41,11 +34,10 @@ export default class GoogleMapContainer extends Component {
       this.googleMapRef = map;
       this.googleRef = maps;
       let locations = this.props.locations;
-      console.log("locations w propsie");
 
       let markers =
-        this.state.locationsToShow &&
-        this.state.locationsToShow.map((location) => {
+        locations &&
+        locations.map((location) => {
           let item = new this.googleRef.Marker({
             position: location.position,
             icon: location.icon,
@@ -62,22 +54,20 @@ export default class GoogleMapContainer extends Component {
     };
 
     if (this.googleMapRef) {
-      let locations = this.props.locations
-      console.log('locations w propsie')
-   
-      let markers = locations &&   
-      locations.map((location) => {
-      let item = new this.googleRef.Marker({position: location.position, icon:  location.icon })
-      google.maps.event.addListener(item, 'click', location.fn)
-      return item
-      })
-      this.markerCluster.clearMarkers()
-      this.markerCluster.addMarkers(markers)
-     }
-
-
-    
-
+      let locations = this.props.locations;
+      let markers =
+        locations &&
+        locations.map((location) => {
+          let item = new this.googleRef.Marker({
+            position: location.position,
+            icon: location.icon,
+          });
+          google.maps.event.addListener(item, "click", location.fn);
+          return item;
+        });
+      this.markerCluster.clearMarkers();
+      this.markerCluster.addMarkers(markers);
+    }
 
     return (
       <GoogleMapReact

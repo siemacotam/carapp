@@ -1,36 +1,37 @@
 .sortPanel {
-    border: 2px solid black;
-    width: 400px;
-    margin: 10px 10px 10px 10px;
-    background-color: white;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  }
-  .sortPanel__subtitle {
-    text-align: center;
-    font-weight: bold;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    padding: 10px 0;
-    background-color: #e3e3e3;
-  }
-  
-  .sortPanel__modul {
-    padding: 5px 0;
-  }
-  .sortPanel__label {
-    margin-left: 15px;
-    padding: 5px 0;
-    display: block;
-  }
-  .sortPanel__input {
-    margin-right: 20px;
-  }
+  border: 2px solid black;
+  width: 380px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+.sortPanel__subtitle {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 10px 0;
+  background-color: #e3e3e3;
+}
 
-  .sortPanel__title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem;
-    padding: 5px;
-    border-bottom: 2px solid #e3e3e3;
-  }
-  
+.sortPanel__modul {
+  padding: 5px 0;
+}
+.sortPanel__label {
+font-family: 'Montserrat', sans-serif;
+  margin-left: 15px;
+  padding: 5px 0;
+  display: block;
+}
+.sortPanel__input {
+  margin-right: 20px;
+}
+
+.sortPanel__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 5px;
+  border-bottom: 2px solid #e3e3e3;
+}

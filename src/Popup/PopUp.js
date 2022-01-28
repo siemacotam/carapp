@@ -2,7 +2,7 @@ import React from "react";
 import { carDetails } from "./subcomponents/carDetails";
 import { parkingDetails } from "./subcomponents/parkingDetails";
 import { poiDetails } from "./subcomponents/poiDetails";
-import './PopUp.css'
+import "./PopUp.css";
 
 const PopUp = ({ open, setIsOpen, data }) => {
   if (!data) {
