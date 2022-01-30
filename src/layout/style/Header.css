@@ -9,6 +9,12 @@ header {
   align-items: center;
   background-color: white;
 }
+@media (max-width: 876px) and (orientation: landscape) {
+  header {
+    padding: 0;
+    margin-bottom: 0.3rem;
+  }
+}
 
 .header__logo {
   display: flex;
@@ -23,7 +29,6 @@ header {
     height: 30px;
   }
 }
-
 header h1 {
   margin-left: 30px;
   text-transform: uppercase;
@@ -31,7 +36,6 @@ header h1 {
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
 }
-
 @media (max-width: 876px) {
   header h1 {
     font-size: 1.1rem;
@@ -40,11 +44,4 @@ header h1 {
 
 .showBurger {
   display: none;
-}
-
-@media (max-width: 876px) and (orientation: landscape) {
-  header {
-    padding: 0;
-    margin-bottom: 0.3rem;
-  }
 }

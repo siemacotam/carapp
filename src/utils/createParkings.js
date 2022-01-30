@@ -12,12 +12,10 @@ export const createParkings = (setParkingData) => {
     };
     let randomLatiNumber = Math.random() * 6 - 1;
     let randomLongiNumber = Math.random() * 8 - 1;
-    newParking.location.latitude =
-      car.objects[0].location.latitude - randomLatiNumber;
-    newParking.location.longitude =
-      car.objects[0].location.longitude - randomLongiNumber;
-    newParking.location.latitude = newParking.location.latitude.toFixed(6);
-    newParking.location.longitude = newParking.location.longitude.toFixed(6);
+    let newLatitude = car.objects[0].location.latitude - randomLatiNumber;
+    let newLongitude = car.objects[0].location.longitude - randomLongiNumber;
+    newParking.location.latitude = newLatitude.toFixed(6);
+    newParking.location.longitude = newLongitude.toFixed(6);
     parkingArray.push(newParking);
   }
   setParkingData(parkingArray);

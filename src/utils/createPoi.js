@@ -31,12 +31,10 @@ export const createPOI = (setPoiData) => {
     }
     let randomLatiNumber = Math.random() * 6 - 1;
     let randomLongiNumber = Math.random() * 8 - 1;
-    newPoi.location.latitude =
-      car.objects[0].location.latitude - randomLatiNumber;
-    newPoi.location.longitude =
-      car.objects[0].location.longitude - randomLongiNumber;
-    newPoi.location.latitude = newPoi.location.latitude.toFixed(6);
-    newPoi.location.longitude = newPoi.location.longitude.toFixed(6);
+    let newLatitude = car.objects[0].location.latitude - randomLatiNumber;
+    let newLongitude = car.objects[0].location.longitude - randomLongiNumber;
+    newPoi.location.latitude = newLatitude.toFixed(6);
+    newPoi.location.longitude = newLongitude.toFixed(6);
     poiArray.push(newPoi);
   }
   setPoiData(poiArray);

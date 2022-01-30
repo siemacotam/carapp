@@ -18,26 +18,28 @@ export const createCars = (
       platesNumber: "dw12345",
       discriminator: "vehicle",
     };
-    let randomLatiNumber = Math.random() * 6 - 1;
-    let randomLongiNumber = Math.random() * 8 - 1;
     let batteryStatus = Math.floor(Math.random() * 100);
+    newCar.batteryLevelPct = batteryStatus;
+
     let rangeKmStatus = Math.floor(Math.random() * 400);
+    newCar.rangeKm = rangeKmStatus;
+
     let carStatus = Math.random() >= 0.5 ? 1 : 0;
-    let newCarPlates = Math.floor(Math.random() * 999999);
     if (carStatus === 1) {
       newCar.status = "AVAILABLE";
     } else {
       newCar.status = "TAKEN";
     }
-    newCar.rangeKm = rangeKmStatus;
+
+    let newCarPlates = Math.floor(Math.random() * 999999);
     newCar.platesNumber = "WI" + newCarPlates;
-    newCar.batteryLevelPct = batteryStatus;
-    newCar.location.latitude =
-      car.objects[0].location.latitude - randomLatiNumber;
-    newCar.location.longitude =
-      car.objects[0].location.longitude - randomLongiNumber;
-    newCar.location.latitude = newCar.location.latitude.toFixed(6);
-    newCar.location.longitude = newCar.location.longitude.toFixed(6);
+
+    let randomLatiNumber = Math.random() * 6 - 1;
+    let randomLongiNumber = Math.random() * 8 - 1;
+    let newLatitude = car.objects[0].location.latitude - randomLatiNumber;
+    let newlongitude = car.objects[0].location.longitude - randomLongiNumber;
+    newCar.location.latitude = newLatitude.toFixed(6);
+    newCar.location.longitude = newlongitude.toFixed(6);
     carArray.push(newCar);
   }
   setCarsData(carArray);

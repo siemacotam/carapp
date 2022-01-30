@@ -1,4 +1,5 @@
 import React from "react";
+import { typeOfIcon } from "../../utils/typeOfIcon";
 
 export const correctLabel = (data, setFilterOption, filterOption) => {
   const closeMenu = () => {
@@ -117,6 +118,7 @@ export const correctLabel = (data, setFilterOption, filterOption) => {
           });
         }}
       />
+      {typeOfIcon(filterTxt) ? <img src={typeOfIcon(filterTxt)} style={{height: "20px", width: "20px", marginRight: '5px'}} alt="" /> : null}
       {label}
     </label>
   );

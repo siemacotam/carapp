@@ -16,7 +16,7 @@ const Header = () => {
           document.querySelector(".sortPanel").classList.toggle("active");
         }}
       >
-        menu
+        Menu
       </button>
     </header>
   );
