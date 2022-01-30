@@ -6,14 +6,13 @@ footer {
   padding: 10px;
   text-align: center;
 }
-
-.footer-none{
-  display: none;
-}
-
 @media (max-width: 876px) and (orientation: landscape) {
   footer {
     padding: 2px;
     font-size: 0.7rem;
   }
+  .footer-none{
+    display: none;
+  }
+  
 }
