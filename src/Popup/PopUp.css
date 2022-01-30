@@ -36,7 +36,7 @@
   flex-grow: 1;
   padding: 13px 0;
   margin-bottom: 15px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;

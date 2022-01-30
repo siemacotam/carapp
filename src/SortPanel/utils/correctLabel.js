@@ -118,7 +118,7 @@ export const correctLabel = (data, setFilterOption, filterOption) => {
           });
         }}
       />
-      {typeOfIcon(filterTxt) ? <img src={typeOfIcon(filterTxt)} style={{height: "20px", width: "20px", marginRight: '5px'}} alt="" /> : null}
+      {typeOfIcon(filterTxt) ? <img src={typeOfIcon(filterTxt)} style={{height: "15px", width: "15px", marginRight: '5px'}} alt="" /> : null}
       {label}
     </label>
   );

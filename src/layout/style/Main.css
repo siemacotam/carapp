@@ -3,17 +3,8 @@ main {
   flex-grow: 1;
   overflow: hidden;
   display: flex;
-  max-width: 1600px;
+  max-width: 1300px;
   width: 100%;
-}
-
-.mapWrapper {
-  text-align: center;
-  flex-grow: 1;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin: 10px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 876px) {
@@ -51,6 +42,7 @@ main {
     flex-basis: 49%;
     border: 1px solid black;
     margin: 2px;
+    height: 100%;
   }
   .sortPanel__title {
     flex-basis: 100%;
