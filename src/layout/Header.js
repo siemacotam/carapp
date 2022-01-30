@@ -14,6 +14,7 @@ const Header = () => {
         onClick={() => {
           document.querySelector(".mapWrapper").classList.toggle("none");
           document.querySelector(".sortPanel").classList.toggle("active");
+          document.querySelector("footer").classList.toggle("footer-none");
         }}
       >
         Menu

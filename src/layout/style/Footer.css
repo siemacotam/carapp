@@ -7,6 +7,10 @@ footer {
   text-align: center;
 }
 
+.footer-none{
+  display: none;
+}
+
 @media (max-width: 876px) and (orientation: landscape) {
   footer {
     padding: 2px;

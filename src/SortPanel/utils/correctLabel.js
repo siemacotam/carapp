@@ -5,6 +5,7 @@ export const correctLabel = (data, setFilterOption, filterOption) => {
   const closeMenu = () => {
     document.querySelector(".mapWrapper").classList.toggle("none");
     document.querySelector(".sortPanel").classList.toggle("active");
+    document.querySelector("footer").classList.toggle("footer-none");
   };
 
   const { filterTxt, label } = data;
