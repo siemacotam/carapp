@@ -9,6 +9,8 @@ export const createPOI = (setPoiData) => {
       location: { latitude: 0, longitude: 0 },
       discriminator: "poi",
       status: "POI",
+      rate:4,
+      numbOfOpinions: 100,
     };
     let typeOfPoi = Math.floor(Math.random() * 4 + 1);
     switch (typeOfPoi) {
@@ -29,6 +31,10 @@ export const createPOI = (setPoiData) => {
         newPoi.status = "BED";
         break;
     }
+    const rate = Math.floor(Math.random() * 3 + 2);
+    newPoi.rate = rate
+    const howManyOpinion = Math.floor(Math.random() * 1000);
+    newPoi.numbOfOpinions = howManyOpinion
     let randomLatiNumber = Math.random() * 6 - 1;
     let randomLongiNumber = Math.random() * 8 - 1;
     let newLatitude = car.objects[0].location.latitude - randomLatiNumber;

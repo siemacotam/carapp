@@ -19,8 +19,6 @@ const kindOfImg = (data) => {
 };
 
 export const poiDetails = (setIsOpen, data) => {
-  const rate = Math.floor(Math.random() * 3 + 2);
-  const howManyOpinion = Math.floor(Math.random() * 1000);
   return (
     <div className="popupinfo">
       <div className="popup__wrap">
@@ -46,8 +44,8 @@ export const poiDetails = (setIsOpen, data) => {
         </p>
         <p className="popup__text bold">Średnia ocen :</p>
         <p className="popup__text">
-          <span className={rate < 3 ? "red" : "green"}>{rate}</span> (
-          {howManyOpinion} opini)
+          <span className={data.rate < 3 ? "red" : "green"}>{data.rate}</span> (
+          {data.numbOfOpinions} opini)
         </p>
       </div>
       <button className="btn">Nawiguj</button>
